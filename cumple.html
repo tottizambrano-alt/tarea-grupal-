@@ -11,63 +11,63 @@
             box-sizing: border-box;
         }
 
-        /* --- FOTOS DE FONDO (Por defecto para Celular: 4 fotos en 2x2) --- */
-        .background-photos {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 columnas */
-            grid-template-rows: 1fr 1fr; /* 2 filas */
-            gap: 10px;
-            padding: 10px;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
+      /* --- FOTOS DE FONDO (Por defecto para Celular: 4 fotos en 2x2) --- */
+.background-photos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-rows: 1fr 1fr;    /* 2 filas */
+    gap: 10px;
+    padding: 10px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
 
-        .bg-foto {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            opacity: 0.25;
-            filter: sepia(20%) contrast(90%);
-            border: 3px solid #d4af37;
-        }
+.bg-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0.25;
+    filter: sepia(20%) contrast(90%);
+    border: 3px solid #d4af37;
+}
 
-        /* --- EL SOBRE CORREGIDO (Proporcional para que no se deforme) --- */
-        .envelope {
-            position: relative;
-            width: 100%;
-            max-width: 520px;
-            height: 300px; /* Reducido un poco para que mantenga la proporción áurea de una carta */
-            background-color: #fffaf0;
-            border-radius: 8px;
-            transition: opacity 0.6s ease, transform 0.6s ease;
-            z-index: 2;
-            border: 6px solid #e6c9a8;
-            box-shadow: 0 15px 35px rgba(230, 201, 168, 0.4);
-        }
+/* --- EL SOBRE CORREGIDO (Proporcional para que no se deforme) --- */
+.envelope {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: 300px; /* Reducido un poco para que mantenga la proporción áurea de una carta */
+    background-color: #fffaf0;
+    border-radius: 8px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: 2;
+    border: 6px solid #e6c9a8;
+    box-shadow: 0 15px 35px rgba(230, 201, 168, 0.4);
+}
 
-        /* --- REGLAS ESPECIALES PARA COMPUTADORA (Pantallas mayores a 768px) --- */
-        @media (min-width: 768px) {
-            .background-photos {
-                grid-template-columns: 1fr 1fr; /* Solo 2 columnas */
-                grid-template-rows: 1fr; /* 1 sola fila */
-            }
+/* --- REGLAS ESPECIALES PARA COMPUTADORA (Pantallas mayores a 768px) --- */
+@media (min-width: 768px) {
+    .background-photos {
+        grid-template-columns: 1fr 1fr; /* Solo 2 columnas */
+        grid-template-rows: 1fr;        /* 1 sola fila */
+    }
 
-            /* Ocultamos las fotos extra en la computadora */
-            .solo-celular {
-                display: none;
-            }
-
-            .envelope {
-                height: 340px; /* En compu puede ser un poco más alta */
-            }
-        }
+    /* Ocultamos las fotos extra en la computadora */
+    .solo-celular {
+        display: none;
+    }
+    
+    .envelope {
+        height: 340px; /* En compu puede ser un poco más alta */
+    }
+}
 
         /* --- CUERPO BLOQUEADO (PANTALLA FIJA) --- */
         body {
@@ -182,10 +182,10 @@
             font-family: 'Palatino', serif;
         }
 
-            .seal-btn:hover {
-                transform: translate(-50%, -50%) scale(1.05) rotate(2deg);
-                box-shadow: 0 10px 25px rgba(163, 42, 66, 0.4);
-            }
+        .seal-btn:hover {
+            transform: translate(-50%, -50%) scale(1.05) rotate(2deg);
+            box-shadow: 0 10px 25px rgba(163, 42, 66, 0.4);
+        }
 
         .seal-initials {
             font-size: 1.6rem;
@@ -235,25 +235,25 @@
             font-weight: normal;
         }
 
-        /* --- CONTENEDOR DE FOTOS CORREGIDO --- */
-        /* --- CONTENEDOR DE FOTOS --- */
-        .img-container {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            margin-bottom: 20px;
-            width: 100%;
-        }
+      /* --- CONTENEDOR DE FOTOS CORREGIDO --- */
+/* --- CONTENEDOR DE FOTOS --- */
+.img-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
-        /* --- ESTILO PARA QUE SE VEA EXACTAMENTE COMO EN TU CAPTURA --- */
-        .foto {
-            width: 46%; /* Controla el ancho de cada foto en horizontal */
-            aspect-ratio: 1 / 1; /* ¡LA CLAVE! Fuerza a que la foto sea un cuadrado perfecto como en tu imagen */
-            object-fit: cover; /* Llena el espacio perfectamente y centra los rostros sin deformar la imagen */
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 3px solid #590913;
-        }
+/* --- ESTILO PARA QUE SE VEA EXACTAMENTE COMO EN TU CAPTURA --- */
+.foto {
+    width: 46%;            /* Controla el ancho de cada foto en horizontal */
+    aspect-ratio: 1 / 1;   /* ¡LA CLAVE! Fuerza a que la foto sea un cuadrado perfecto como en tu imagen */
+    object-fit: cover;     /* Llena el espacio perfectamente y centra los rostros sin deformar la imagen */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 3px solid #590913;
+}
 
         .letter-text {
             color: #4a4a4a;
@@ -265,7 +265,7 @@
         }
 
         .signature {
-            color: #590913;
+            color: #590913; 
             font-size: 1.3rem;
             font-weight: bold;
             font-style: italic;
@@ -294,15 +294,15 @@
             animation: softPulse 3s infinite ease-in-out;
         }
 
-            .audio-container::before {
-                content: "Escucha esto mientras lees ❤";
-                font-family: 'Georgia', serif;
-                font-size: 0.95rem;
-                color: #590913;
-                font-style: italic;
-                font-weight: bold;
-                letter-spacing: 0.5px;
-            }
+        .audio-container::before {
+            content: "Escucha esto mientras lees ❤";
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+            color: #590913;
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
 
         audio {
             width: 100%;
@@ -311,14 +311,14 @@
             outline: none;
         }
 
-            audio::-webkit-media-controls-enclosure {
-                background-color: #fcf8f9;
-                border-radius: 30px;
-            }
+        audio::-webkit-media-controls-enclosure {
+            background-color: #fcf8f9;
+            border-radius: 30px;
+        }
 
-            audio::-webkit-media-controls-panel {
-                background-color: #fcf8f9;
-            }
+        audio::-webkit-media-controls-panel {
+            background-color: #fcf8f9;
+        }
 
         /* --- CORAZONES FLOTANTES (EFECTO NUEVO) --- */
         .heart-particle {
@@ -336,15 +336,12 @@
                 transform: translateY(100vh) translateX(0) scale(0.5);
                 opacity: 0;
             }
-
             10% {
                 opacity: 0.7;
             }
-
             90% {
                 opacity: 0.7;
             }
-
             100% {
                 transform: translateY(-10vh) translateX(var(--randomX)) scale(1.2);
                 opacity: 0;
@@ -352,20 +349,9 @@
         }
 
         @keyframes softPulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 4px 15px rgba(244, 176, 199, 0.3);
-            }
-
-            50% {
-                transform: scale(1.02);
-                box-shadow: 0 6px 20px rgba(244, 176, 199, 0.5);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 4px 15px rgba(244, 176, 199, 0.3);
-            }
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(244, 176, 199, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 6px 20px rgba(244, 176, 199, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(244, 176, 199, 0.3); }
         }
 
         /* ANIMACIONES APERTURA */
@@ -382,12 +368,12 @@
 </head>
 <body>
 
-    <div class="background-photos">
-        <img src="fondo_pareja1.jpeg" alt="Recuerdo 1" class="bg-foto">
-        <img src="fondo_pareja2.jpeg" alt="Recuerdo 2" class="bg-foto">
-        <img src="fondo_pareja3.jpeg" alt="Recuerdo 3" class="bg-foto solo-celular">
-        <img src="fondo_pareja4.jpeg" alt="Recuerdo 4" class="bg-foto solo-celular">
-    </div>
+  <div class="background-photos">
+    <img src="fondo_pareja1.jpeg" alt="Recuerdo 1" class="bg-foto">
+    <img src="fondo_pareja2.jpeg" alt="Recuerdo 2" class="bg-foto">
+    <img src="fondo_pareja3.jpeg" alt="Recuerdo 3" class="bg-foto solo-celular">
+    <img src="fondo_pareja4.jpeg" alt="Recuerdo 4" class="bg-foto solo-celular">
+</div>
 
     <div class="wrapper" id="main-wrapper">
 
@@ -416,20 +402,20 @@
             </div>
 
             <div class="letter-text">
-                Katty Daniela Chávez Rivas,  Feliz cumpleaños, Felices 15 años.
+                Katty Daniela Chávez Rivas,  Feliz cumpleaños, Felices 15 años. 
 
-                Aproximadamente hace 2 meses nos conocimos, tú siendo de la Sierra, yo de la Costa y conociéndonos en el Oriente JAJAJAJA. Empezamos a hablar y desde que te vi me quedé pensando solo en ti.
+                Aproximadamente hace 2 meses nos conocimos, tú siendo de la Sierra, yo de la Costa y conociéndonos en el Oriente JAJAJAJA. Empezamos a hablar y desde que te vi me quedé pensando solo en ti. 
+                
+                Recuerdo que en el ensayo de los bailes para sor Chiara, estaba sentado con una amiga que me contaba una historia, mientras tú estabas practicando y yo simplemente me olvidé del mundo. Me concentré tanto en ti que mi amiga se dio cuenta de que no la escuchaba me tuvo que chasquear los dedos y preguntarme <em>Te gusta, verdad?</em>. Y la verdad, era imposible negarlo. Ese día fue maravilloso, fue el primer día donde hablamos full. 
 
-                Recuerdo que en el ensayo de los bailes para sor Chiara, estaba sentado con una amiga que me contaba una historia, mientras tú estabas practicando y yo simplemente me olvidé del mundo. Me concentré tanto en ti que mi amiga se dio cuenta de que no la escuchaba me tuvo que chasquear los dedos y preguntarme <em>Te gusta, verdad?</em>. Y la verdad, era imposible negarlo. Ese día fue maravilloso, fue el primer día donde hablamos full.
+                Luego llegó nuestro último día juntos, que fue igual de hermoso. Te pude abrazar más, pudimos darnos nuestro primer beso, que hasta el día de hoy me ha fascinado como no tienes idea. Luego cada uno volvió a su hogar y nos separa la distancia, pero hablar contigo me hace sentirte cerca. 
 
-                Luego llegó nuestro último día juntos, que fue igual de hermoso. Te pude abrazar más, pudimos darnos nuestro primer beso, que hasta el día de hoy me ha fascinado como no tienes idea. Luego cada uno volvió a su hogar y nos separa la distancia, pero hablar contigo me hace sentirte cerca.
-
-                Me has dado todos los motivos para creer en ti, confío en tu fidelidad, en tu verdad y en lo que sientes por mí. Sé la clase de chica que eres, llena de valores, divertida, con un humor que me encanta y un corazón enorme.
+                Me has dado todos los motivos para creer en ti, confío en tu fidelidad, en tu verdad y en lo que sientes por mí. Sé la clase de chica que eres, llena de valores, divertida, con un humor que me encanta y un corazón enorme, estoy muy feliz de tenerte en mi vida y anhelo sientas lo mismo
                 Daniela Chávez Quiero darlo todo por ti ❤️
             </div>
 
             <div class="audio-container">
-                <audio id="musica-fondo" controls src="tu_cancion.mp3"></audio>
+                <audio id="musica-fondo" controls src="para_danni.mp4"></audio>
             </div>
 
             <div class="signature">Te amo con todo mi corazón, mi Danni</div>
@@ -437,7 +423,7 @@
 
     </div>
 
-    <script>
+  <script>
         function openEnvelope() {
             const wrapper = document.getElementById('main-wrapper');
             const envelope = document.getElementById('physical-envelope');
@@ -458,7 +444,7 @@
                     envTitle.style.display = 'none';
                     letter.style.display = 'block';
 
-                    // --- REPRODUCCIÓN AUTOMÁTICA DEL AUDIO ---
+                    // --- REPRODUCCIÓN AUTOMÁTICA ---
                     const audio = document.getElementById('musica-fondo');
                     if (audio) {
                         audio.play().catch(error => {
@@ -466,27 +452,34 @@
                         });
                     }
 
-                    // ... resto de tu código ...
+                    // 4. Hace que la carta aparezca suavemente
+                    setTimeout(() => {
+                        letter.style.opacity = '1';
+                        letter.style.transform = 'scale(1)';
+                        // Iniciar la lluvia de corazones
+                        setInterval(createHeart, 300);
+                    }, 50);
+                }, 400);
 
-                }, 400); // 👈 ¡ESTE ES EL SEGUNDO TIEMPO (400 milisegundos)!
+            }, 700);
+        }
 
-            }, 700); // 👈 ¡ESTE ES EL PRIMER TIEMPO (700 milisegundos)!
         // --- FUNCIÓN PARA GENERAR CORAZONES FLOTANTES ---
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart-particle');
             heart.innerHTML = '❤';
-
+            
             // Posición horizontal aleatoria
             heart.style.left = Math.random() * 100 + 'vw';
-
+            
             // Velocidad y desviación aleatoria
             const duration = Math.random() * 2 + 3; // Entre 3 y 5 segundos
             heart.style.animationDuration = duration + 's';
-
+            
             const randomX = (Math.random() * 200 - 100) + 'px';
             heart.style.setProperty('--randomX', randomX);
-
+            
             // Tamaño aleatorio de los corazones
             heart.style.fontSize = Math.random() * 15 + 15 + 'px';
 
